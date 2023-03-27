@@ -7,7 +7,11 @@ import java.util.Map;
  *
  */
 public interface ISymptomWriter {
-// WRITE YOUR CODE HERE
+
+	/**
+	 * 
+	 * @param symptoms is a list of symptoms to write and put in alphabetical order
+	 */
 
 	void writeSymptoms(Map<String, Integer> symptoms);
 }
