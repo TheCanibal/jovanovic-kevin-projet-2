@@ -1,8 +1,11 @@
 package com.hemebiotech.analytics;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Iterator;
 import java.util.Map;
 
 // WRITE YOUR CODE HERE
+public class WriteSymptomDataToFile implements ISymptomWriter {
+
+	public void writeSymptoms(Map<String, Integer> symptoms) {
+
+	}
+}
