@@ -2,11 +2,17 @@ package com.hemebiotech.analytics;
 
 import java.util.Map;
 
-
 /**
- * Anything the will write symptom data on a valid data output format
+ * Anything that will write symptom data on a valid data output format
  *
  */
 public interface ISymptomWriter {
-// WRITE YOUR CODE HERE
+
+	/**
+	 * 
+	 * @param symptoms is a dictionary of symptoms and their quantity to write and
+	 *                 put in alphabetical order
+	 */
+
+	void writeSymptoms(Map<String, Integer> symptoms);
 }
