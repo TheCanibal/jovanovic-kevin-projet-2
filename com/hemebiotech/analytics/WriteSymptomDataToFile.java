@@ -17,14 +17,12 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 
 	public void writeSymptoms(Map<String, Integer> symptoms) {
 
-		Map<String, Integer> treeMap = new TreeMap<String, Integer>();
+		Map<String, Integer> treeMap = new TreeMap<String, Integer>(symptoms);
 		if (filepath != null) {
 			try {
-				// Création d’un bufferedWriter qui utilise le fileWriter
 				BufferedWriter writer = new BufferedWriter(new FileWriter(filepath, false));
-				symptoms.putAll(treeMap);
 				for (Map.Entry<String, Integer> entry : treeMap.entrySet()) {
-					writer.write(entry.getKey() + ":" + entry.getValue());
+					writer.write(entry.getKey() + " : " + entry.getValue());
 					writer.newLine();
 				}
 				writer.close();
